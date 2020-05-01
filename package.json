@@ -16,7 +16,9 @@
     "uri": "https://github.com/heavysixer/d4/blob/master/AUTHORS.txt"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "MIT Expat",
   "devDependencies": {
@@ -37,6 +39,8 @@
   },
   "dependencies": {
     "grunt-env": ">=0.4.1",
-    "grunt-contrib-clean": ">=0.5.0"
-  }
+    "grunt-contrib-clean": ">=0.5.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
